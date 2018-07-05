@@ -1,0 +1,44 @@
+extend layout
+
+block header
+    link(rel='stylesheet', href='/stylesheets/index.css')
+    link(rel='stylesheet', href='/stylesheets/images.css')
+
+block content
+  .container.center
+      .row
+        form(id="logo" action="/" method="get")
+          img.cursor#logo(src='/images/logo2.jpg')
+      
+      .row.center-ajust
+        form(id="accueil" class="item img1" action="/accueil" method="get")
+          h1.text.cursor.text-uppercase.texthover.noselect#accueil accueil
+        form(id="pourquoi" class="item img2 separator" action="/pourquoi" method="get")
+          h1.text.cursor.text-uppercase.texthover.noselect#pourquoi pourquoi
+        form(id="entreprise" class="item img3" action="/entreprise" method="get")
+          h1.blocktext3.cursor.text-uppercase.blocktext3hover.noselect#entreprise l'entreprise <br/> et sa <br/> biographie
+
+        form(id="demarche" class="item img4" action="/demarche" method="get")
+          h1.text.cursor.text-uppercase.texthover.noselect#demarche démarche
+        form(id="qui" class="item img5 separator" action="/qui" method="get")
+          h1.blocktext.cursor.text-uppercase.blocktexthover.noselect#qui qui <br/> sommes-nous
+        form(id="ethique" class="item img6" action="/ethique" method="get")
+          h1.text.cursor.text-uppercase.texthover.noselect#ethique éthique
+
+        form(id="respect" class="item img7" action="/respect" method="get")
+          h1.blocktext3.cursor.text-uppercase.blocktext3hover.noselect#respect respect <br/>et <br/>égalité
+        form(id="verite" class="item img8 separator" action="/verite" method="get")
+          h1.blocktext3.cursor.text-uppercase.blocktext3hover.noselect#verite vérité, <br/>réalité et <br/>certitude
+        form(id="contact" class="item img9" action="/contact" method="get")
+          h1.text.cursor.text-uppercase.texthover.noselect#contact contact
+      
+      .row.center-ajust
+        button.button.text-uppercase(onclick="location.href='/accueil'") accueil
+        button.button.text-uppercase(onclick="location.href='/pourquoi'") pourquoi
+        button.button.text-uppercase(onclick="location.href='/entreprise'") l'entreprise et sa biographie
+        button.button.text-uppercase(onclick="location.href='/demarche'") démarche
+        button.button.text-uppercase(onclick="location.href='/qui'") qui sommes-nous
+        button.button.text-uppercase(onclick="location.href='/ethique'") éthique
+        button.button.text-uppercase(onclick="location.href='/respect'") respect et égalité
+        button.button.text-uppercase(onclick="location.href='/verite'") vérité, réalité et certitude
+        button.button.text-uppercase(onclick="location.href='/contact'") contact

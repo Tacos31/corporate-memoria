@@ -1,0 +1,74 @@
+var express = require('express');
+var router = express.Router();
+var app = express();
+var nodemailer = require('nodemailer');
+
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'Express' });
+});
+
+router.get('/accueil', function(req, res, next) {
+  res.render('accueil');
+});
+
+router.get('/pourquoi', function(req, res, next) {
+  res.render('pourquoi');
+});
+
+router.get('/entreprise', function(req, res, next) {
+  res.render('entreprise');
+});
+
+router.get('/demarche', function(req, res, next) {
+  res.render('demarche');
+});
+
+router.get('/qui', function(req, res, next) {
+  res.render('qui');
+});
+
+router.get('/ethique', function(req, res, next) {
+  res.render('ethique');
+});
+
+router.get('/respect', function(req, res, next) {
+  res.render('respect');
+});
+
+router.get('/verite', function(req, res, next) {
+  res.render('verite');
+});
+
+router.get('/contact', function(req, res, next) {
+  res.render('contact');
+});
+
+router.post('/contact', function(req, res, next) {
+  const transporter = nodemailer.createTransport({
+    service: 'Gmail',
+    auth: {
+          user: `sabathieralexandre@gmail.com`,
+          pass: `Alex@1997`
+    }
+  })
+  const mailOptions = {
+      from: `${req.body.email}`,
+      to: 'sabathieralexandre@gmail.com',
+      subject: `message de ${req.body.name} depuis corporate memoria`,
+      text: `${req.body.message} telephone : ${req.body.phone} email : ${req.body.email}`,
+      replyTo: `${req.body.email}`
+    }
+  //console.log(mailOptions);
+  transporter.sendMail(mailOptions, function(err, res) {
+    if (err) {
+      //console.error('there was an error: ', err);
+    } else {
+      //console.log('here is the res: ', res)
+    }
+  })
+  res.render('contact', {
+    successMessage: "email envoyé",
+  });
+});
+
+module.exports = router;

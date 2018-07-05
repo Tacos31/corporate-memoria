@@ -1,0 +1,31 @@
+extend navbar
+
+block content2
+  .row
+    .item2.img09
+      h1.text-uppercase.text.noselect#contact contact
+    .overflow
+      img(src="/images/contact/1.2.jpg" id="imgtop")
+  .row
+    img(src="/images/contact/2.2.jpg" id="imgleft")
+    .blocktextp
+      if successMessage
+        .alert.alert-success #{successMessage}
+      form(action="/contact" method="post")
+        |<br><br>Adresse mail:<br>
+        input(class="msg" type="text" name="email")
+        |<br><br>Nom:<br>
+        input(class="msg" type="text" name="name")
+        |<br><br>Numéro de téléphone:<br>
+        input(class="msg" type="text" name="phone")
+        |<br><br>Message:<br>
+        textarea(class="msg" rows="6" cols="50" name="message")
+        |<br><br>
+        input(class="no-border" type="submit" value="Envoyer")
+      |<br><br>Tél. : 04 78 95 37 71 
+      |<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;06 07 91 03 41
+
+      |<br><br>Directrice de publication : FRANCOISE VALLA
+
+  block scripts2
+    script(src='/js/modal.js')

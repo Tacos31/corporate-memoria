@@ -1,0 +1,27 @@
+extend layout
+
+block header
+  link(rel='stylesheet', href='/stylesheets/page.css')
+  link(rel='stylesheet', href='/stylesheets/index.css')
+  link(rel='stylesheet', href='/stylesheets/images.css')
+
+block content
+  .container2.center
+    div(class="topnav" id="myTopnav")
+      form(id="logo" action="/" method="get")
+        img.cursor#logo(src='/images/logo.jpg')
+      button.button.text-uppercase(onclick="location.href='/accueil'") accueil
+      button.button.text-uppercase(onclick="location.href='/pourquoi'") pourquoi
+      button.button.text-uppercase(onclick="location.href='/entreprise'") l'entreprise et sa biographie
+      button.button.text-uppercase(onclick="location.href='/demarche'") démarche
+      button.button.text-uppercase(onclick="location.href='/qui'") qui sommes-nous
+      button.button.text-uppercase(onclick="location.href='/ethique'") éthique
+      button.button.text-uppercase(onclick="location.href='/respect'") respect et égalité
+      button.button.text-uppercase(onclick="location.href='/verite'") vérité, réalité et certitude
+      button.button.text-uppercase(onclick="location.href='/contact'") contact
+      button.button.icon(href="javascript:void(0);" onclick="myFunction()")
+    block content2
+
+block scripts
+  script(src='/js/page.js')
+  block scripts2
