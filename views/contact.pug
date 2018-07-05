@@ -11,8 +11,9 @@ block content2
     .blocktextp
       if successMessage
         .alert.alert-success #{successMessage}
+      h1 <br> Contactez-nous
       form(action="/contact" method="post")
-        |<br><br>Adresse mail:<br>
+        |<br>Adresse mail:<br>
         input(class="msg" type="text" name="email")
         |<br><br>Nom:<br>
         input(class="msg" type="text" name="name")
