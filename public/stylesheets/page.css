@@ -101,7 +101,7 @@
   background-position: center;
 }
 
-@media screen and (max-width: 1230px) {
+@media screen and (max-width: 1247px) {
   .topnav button:not(:first-child) {display: none;}
   .topnav button.icon {
     float: right;
@@ -112,7 +112,7 @@
   }
 }
 
-@media screen and (max-width: 1230px) {
+@media screen and (max-width: 1247px) {
   .topnav.responsive {
     position: relative;
     display: flex;
