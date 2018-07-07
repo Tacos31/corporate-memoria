@@ -1,7 +1,7 @@
 .container2 {
   background: white;
   padding: 0px;
-  max-width: 1236px;
+  max-width: 1233px;
   min-width: 350px;
 }
 
@@ -11,7 +11,7 @@
 }
 
 .msg {
-  width: 600px;
+  width: 100%;
 }
 
 .italique {
@@ -26,6 +26,14 @@
     /*max-width: 500px;*/
 }
 
+.big {
+  font-size: 15px !important;
+  width : 30%;
+  height : 50px;
+}
+.border {
+  border: 1px solid #8e8e8e !important;
+}
 .blocktextp {
   flex-shrink: 100;
   padding-left: 20px;
