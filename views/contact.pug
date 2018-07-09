@@ -11,6 +11,8 @@ block content2
     .blocktextp
       if successMessage
         .alert.alert-success #{successMessage}
+      if errorMessage
+        .alert.alert-danger #{errorMessage}
       h1 <br> Contactez-nous
       form(action="/contact" method="post")
         |<br>Adresse mail:<br>
@@ -29,6 +31,3 @@ block content2
       |<br><br>Directrice de publication : FRANCOISE VALLA
       |<br><br>Photographe : Florence CHAPUIS
       |<br><br>Design graphique : Bruno CHIAPELLO
-
-  block scripts2
-    script(src='/js/modal.js')
