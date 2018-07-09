@@ -53,7 +53,7 @@ router.post('/contact', function(req, res, next) {
   })
   const mailOptions = {
       from: `${req.body.email}`,
-      to: 'sabathieralexandre@gmail.com',
+      to: 'corporate.memoria@outlook.com',
       subject: `Message de ${req.body.name} depuis Corporate Memoria`,
       text: `Message :\n\n${req.body.message}\n\nContactez moi :\n\nTelephone : ${req.body.phone} \nEmail : ${req.body.email}`,
       replyTo: `${req.body.email}`
