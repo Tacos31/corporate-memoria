@@ -4,7 +4,10 @@
   max-width: 1235px;
   min-width: 350px;
 }
-
+em {
+  color : #372c63;
+  font-style: normal;
+}
 .row {
     flex-wrap: nowrap;
     /*overflow: hidden;*/
