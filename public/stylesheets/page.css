@@ -10,6 +10,10 @@
     /*overflow: hidden;*/
 }
 
+.blue {
+  color: #372c63;
+}
+
 .msg {
   width: 100%;
 }
@@ -23,12 +27,8 @@
   text-justify: inter-word;
 }
 
-.cadre {
-    border-bottom: 2px solid black;
-    padding: 20px;
-    margin-right: 20px;
-    margin-top: 50px;
-    /*max-width: 500px;*/
+.block {
+  padding: 30px;
 }
 
 .big {
@@ -40,10 +40,11 @@
   border: 2px solid #8e8e8e !important;
 }
 .blocktextp {
+  font-size: 18px;
   flex-shrink: 100;
-  padding-left: 20px;
-  padding-top: 20px;
-  padding-right: 20px;
+  padding-left: 50px;
+  padding-top: 30px;
+  padding-right: 50px;
   max-width: 880px;
   min-width: 350px;
   font-family: "Gill Sans", sans-serif;
