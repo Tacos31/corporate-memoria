@@ -31,7 +31,8 @@ em {
 }
 
 .block {
-  padding: 30px;
+  /*padding: 30px;*/
+  text-align: inherit;
 }
 
 .big {
@@ -42,6 +43,7 @@ em {
 .border {
   border: 2px solid #8e8e8e !important;
 }
+
 .blocktextp {
   font-size: 18px;
   flex-shrink: 100;
@@ -54,7 +56,12 @@ em {
   font-weight: 400;
   text-align: justify;
   text-justify: inter-word;
+}
 
+.less-padding {
+  padding-left:  60px;
+  padding-right: 60px;
+  min-width: 600px;
 }
 
 .overflow {
