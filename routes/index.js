@@ -43,6 +43,10 @@ router.get('/contact', function(req, res, next) {
   res.render('contact');
 });
 
+router.get('/sitemap.xml', function(req, res, next) {
+  res.render('sitemap.xml');
+});
+
 router.post('/contact', function(req, res, next) {
   if (req.body.email=="" || req.body.name == "" || req.body.message == "") {
     res.render('contact', {
