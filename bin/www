@@ -13,11 +13,11 @@ var express = require('express');
 //var app = express();
 
 // your express configuration here
-//var httpServer = http.createServer(app);
 
 var httpServer = http.createServer(function (req, res) {
   // ${req.headers.host}${req.url}
-  res.writeHead(301,{'Location': 'https://www.corporate-memoria.com' + req.url });
+  if (req.headers.host == "corporate-memoria.com")
+  res.writeHead(301,{'Location': 'http://www.corporate-memoria.com' });
   res.end();
 }, app);
 
