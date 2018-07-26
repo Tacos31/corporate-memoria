@@ -16,9 +16,10 @@ var express = require('express');
 
 var httpServer = http.createServer(function (req, res) {
   // ${req.headers.host}${req.url}
-  if (req.headers.host == "corporate-memoria.com")
-  res.writeHead(301,{'Location': 'http://www.corporate-memoria.com' });
-  res.end();
+  if (req.headers.host == "corporate-memoria.com") {
+    res.writeHead(301,{'Location': 'http://www.corporate-memoria.com' });
+    res.end();
+  }
 }, app);
 
 var httpsServer = https.createServer(credentials, app);
