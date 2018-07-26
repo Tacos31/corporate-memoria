@@ -6,7 +6,9 @@ var nodemailer = require('nodemailer');
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
-
+router.get('//', function(req, res, next) {
+  res.render('index', { title: 'Express' });
+});
 router.get('/accueil', function(req, res, next) {
   res.render('accueil');
 });
