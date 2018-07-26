@@ -16,7 +16,7 @@ var express = require('express');
 
 var httpServer = http.createServer(function (req, res) {
   // ${req.headers.host}${req.url}
-  res.writeHead(301,{'Location': 'https://www.corporate-memoria.com' + req.url });
+  res.writeHead(301,{'Location': 'https://www.corporate-memoria.com/' + req.url });
   res.end();
 }, app);
 
