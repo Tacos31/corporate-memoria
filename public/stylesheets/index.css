@@ -52,10 +52,10 @@
 }
 
 .texthover:hover {
-  transform: scale(1.04);
-  -webkit-transform: scale(1.04);
-  /*-webkit-transition: .4s ease-in-out;
-  transition: .4s ease-in-out;*/
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  /*-webkit-transition: .1s linear;
+  transition: .1s linear;*/
 }
 
 .blocktext {
@@ -68,8 +68,8 @@
 }
 
 .blocktexthover:hover {
-  transform: scale(1.04);
-  -webkit-transform: scale(1.04);
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
 }
 
 .blocktext3 {
@@ -82,8 +82,8 @@
 }
 
 .blocktext3hover:hover {
-  transform: scale(1.04);
-  -webkit-transform: scale(1.04);
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
 
 }
 
@@ -111,6 +111,7 @@
     border: none;
     outline: none;
     cursor: pointer;
+    transition: 0.3s all;
 }
 
 .button:focus {

@@ -17,17 +17,3 @@ var express = require('express');
 http.createServer(app).listen(80);
 
 https.createServer(credentials, app).listen(443);
-
-/*function (req, res) {
-console.log("salut !");
-console.log("host: " + req.url);
-  if (req.headers['host'] == "corporate-memoria.com" || req.headers['host'] == "www.corporate-memoria.com") {
-    console.log('coucou1');
-    res.writeHead(301, { "Location": "https://www.corporate-memoria.com" + req.url });
-    res.end();
-  } else {
-    console.log("coucou2");
-    res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url });
-    res.end();
-  }
-}*/

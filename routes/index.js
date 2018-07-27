@@ -52,7 +52,7 @@ router.get('/sitemap.xml', function(req, res, next) {
 router.post('/contact', function(req, res, next) {
   if (req.body.email=="" || req.body.name == "" || req.body.message == "") {
     res.render('contact', {
-      errorMessage: "Veuillez remplir les champs obligatoires"
+      errorMessage: "Veuillez remplir les champs obligatoires ( * )"
     });
   } else {
     const transporter = nodemailer.createTransport({
