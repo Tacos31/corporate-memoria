@@ -20,31 +20,12 @@ http.createServer(function (req, res) {
     if (req.headers['host'] == "corporate-memoria.com" || req.headers['host'] == "www.corporate-memoria.com") {
       console.log('coucou1');
       res.writeHead(301, { "Location": "https://www.corporate-memoria.com" + req.url });
-      return res.end();
+      res.end();
     } else {
       console.log("coucou2");
       res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url });
-      return res.end();
+      res.end();
     }
 }, app).listen(80);
 
 https.createServer(credentials, app).listen(443);;
-
-//httpServer.listen(80);
-
-//httpsServer.listen(443);
-/*function (req, res) {
-  // ${req.headers.host}${req.url}
-  if (req.headers.host == "corporate-memoria.com") {
-    res.writeHead(301,{'Location': 'http://www.corporate-memoria.com' });
-    res.end();
-  }
-},*/
-/*function(req, res) {
-    console.log("salut " + req.headers['host']);
-    if (req.headers['host'] == 'corporate-memoria.com') {
-      console.log("salut2");
-      res.writeHead(301, { "Location": "http://www.corporate-memoria.com" });
-      return res.end();
-    }
-  }*/
