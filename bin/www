@@ -14,7 +14,12 @@ var express = require('express');
 
 // your express configuration here
 
-http.createServer(app).listen(80);
+http.createServer(function (req, res) {
+  if (req.headers['host'] == "corporate-memoria.com") {
+    res.writeHead(301, { "Location": "http://www.corporate-memoria.com" + req.url });
+    res.end();
+  }
+}, app).listen(80);
 
 https.createServer(credentials, app).listen(443);
 
