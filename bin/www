@@ -28,4 +28,4 @@ http.createServer(function (req, res) {
     }
 }, app).listen(80);
 
-https.createServer(credentials, app).listen(443);;
+https.createServer(credentials, app).listen(443);
