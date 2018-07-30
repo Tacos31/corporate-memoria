@@ -31,7 +31,8 @@ em {
 }
 
 .block {
-  /*padding: 30px;*/
+  word-break: break-word;
+  padding: 20px;
   text-align: inherit;
 }
 
@@ -61,7 +62,9 @@ em {
   text-align: justify;
   text-justify: inter-word;
 }
-
+.no-justify {
+  text-align: left;
+}
 .no-top {
   padding-top: 0px;
 }
@@ -72,9 +75,10 @@ em {
   padding-bottom: 0px;
 }
 .less-padding {
-  padding-left:  60px;
-  padding-right: 60px;
+  padding-left:  40px;
+  padding-right: 40px;
   min-width: 600px;
+  text-align: left;
 }
 
 .overflow {
