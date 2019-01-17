@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var app = express();
-var nodemailer = require('nodemailer');
+const nodemailer = require("nodemailer");
 
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
@@ -67,19 +67,20 @@ router.post('/contact', function(req, res, next) {
         to: 'contact@corporate-memoria.com',
         subject: `Message de ${req.body.name} depuis Corporate Memoria`,
         text: `Message :\n\n${req.body.message}\n\nContactez moi :\n\nTelephone : ${req.body.phone} \nEmail : ${req.body.email}`,
-        replyTo: `${req.body.email}`
+        //replyTo: `${req.body.email}`
       }
-    //console.log(mailOptions);
+
     transporter.sendMail(mailOptions, function(err, res) {
       if (err) {
         console.error('there was an error: ', err);
-      } else {
-        //console.log('here is the res: ', res)
       }
     })
+
+
     res.render('contact', {
       successMessage: "Email envoyé"
     });
+    
   }
 });
 
